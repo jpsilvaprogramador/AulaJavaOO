@@ -1,6 +1,7 @@
 
 package aplication;
 import entities.AnimaisResgatados;
+import java.util.Scanner;
 /*==============================================================================
 //1 - Criação da classe principal
 * ==============================================================================
@@ -8,13 +9,14 @@ import entities.AnimaisResgatados;
 public class PaginaPrincipal {
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         //Objeto instanciado
-        AnimaisResgatados animalResgatado = new AnimaisResgatados(12365,"Cachorro","fafa",6.6,3.6,"sfsdfs");
-        
-        //Chamando os valores só para teste
-        System.out.println("Cadastro: " + animalResgatado.getCodigoCadastro());
-        System.out.println("Etiqueta: " + animalResgatado.getCodigoEtiqueta());
-        
+        AnimaisResgatados animalResgatado = new AnimaisResgatados();
+
+        animalResgatado.cadastrarAnimal();
+        animalResgatado.exibirDadosCompleto();
+      
+        sc.close();
     }
     
 }
